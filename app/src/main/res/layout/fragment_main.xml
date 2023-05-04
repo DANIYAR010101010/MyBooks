@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.main.MainFragment">
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="32dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/baseline_menu_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
+        android:src="@drawable/baseline_search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_border"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_menu" />
+
+    <TextView
+        android:id="@+id/tv_read_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp"
+        android:text="Читаю сейчас"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_van_gog_book"
+        android:layout_width="142dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24sp"
+        android:src="@drawable/image_book_van_gog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_read_now" />
+
+    <TextView
+        android:id="@+id/tv_statistic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="135dp"
+        android:text="Cтатистика:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/iv_van_gog_book"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_group_131"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/group_131"
+        app:layout_constraintStart_toEndOf="@+id/iv_van_gog_book"
+        app:layout_constraintTop_toBottomOf="@+id/tv_statistic" />
+
+    <TextView
+        android:id="@+id/tv_stat_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="Прочитано 45"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/icon_group_131"
+        app:layout_constraintTop_toBottomOf="@+id/tv_statistic" />
+
+    <TextView
+        android:id="@+id/tv_stat_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="страниц из 100"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/icon_group_131"
+        app:layout_constraintTop_toBottomOf="@+id/tv_stat_1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_van_gog_book">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_play"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/black_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_van_gog_book">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    
+                    <ImageView
+                        android:id="@+id/iv_polygon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/image_polygon"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"/>
+                    <TextView
+                        android:text="Звездная ночь"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="44dp"
+                        android:layout_marginBottom="6dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/iv_polygon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:id="@+id/iv_line"
+                        app:layout_constraintStart_toEndOf="@+id/iv_polygon"
+                        android:layout_width="220dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="52dp"
+                        android:src="@drawable/line_play"
+                        android:backgroundTint="@color/valet"
+                        android:layout_marginStart="10dp"
+                        android:layout_height="2dp"/>
+                    <ImageView
+                        app:layout_constraintStart_toEndOf="@+id/iv_line"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="44dp"
+                        android:src="@drawable/vector_menu"
+                        android:layout_width="4dp"
+                        android:layout_height="18dp"/>
+                    
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_populars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="26dp"
+                android:text="Популярные"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_play" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="Enter How Much Cookies You Want"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_books" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/image_magic" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

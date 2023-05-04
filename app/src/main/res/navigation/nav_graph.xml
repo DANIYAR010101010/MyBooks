@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/verificationFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mybooks.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.example.mybooks.ui.verification.VerificationFragment"
+        android:label="fragment_verification"
+        tools:layout="@layout/fragment_verification" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.mybooks.ui.verification.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/chooseAccountFragment"
+        android:name="com.example.mybooks.ui.verification.ChooseAccountFragment"
+        android:label="fragment_choose_account"
+        tools:layout="@layout/fragment_choose_account" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.mybooks.ui.menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mybooks.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/libFragment"
+        android:name="com.example.mybooks.ui.library.LibFragment"
+        android:label="fragment_lib"
+        tools:layout="@layout/fragment_lib" />
+    <fragment
+        android:id="@+id/favFragment"
+        android:name="com.example.mybooks.ui.fav.FavFragment"
+        android:label="fragment_fav"
+        tools:layout="@layout/fragment_fav" />
+    <fragment
+        android:id="@+id/audioFragment"
+        android:name="com.example.mybooks.ui.audio.AudioFragment"
+        android:label="fragment_audio"
+        tools:layout="@layout/fragment_audio" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.mybooks.ui.detail_for_star.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/testForStarFragment"
+        android:name="com.example.mybooks.ui.detail_for_star.TestForStarFragment"
+        android:label="fragment_test_for_star"
+        tools:layout="@layout/fragment_test_for_star" />
+</navigation>
